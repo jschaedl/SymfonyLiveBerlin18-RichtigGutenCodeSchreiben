@@ -13,13 +13,24 @@ namespace example;
 final class Container
 {
     /**
+     * @var ContainerId
+     */
+    private $id;
+
+    /**
      * @var Port
      */
     private $port;
 
-    public function __construct(Port $port)
+    public function __construct(ContainerId $id, Port $port)
     {
+        $this->id = $id;
         $this->port = $port;
+    }
+
+    public function id(): ContainerId
+    {
+        return $this->id;
     }
 
     public function port(): Port

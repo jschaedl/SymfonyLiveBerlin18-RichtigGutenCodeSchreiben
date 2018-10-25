@@ -13,13 +13,19 @@ use PHPUnit\Framework\TestCase;
  */
 final class ContainerTest extends TestCase
 {
-    public function test_has_port(): void
+    /**
+     * @testdox Can be constructed with valid container id and valid port
+     */
+    public function test_can_be_constructed(): void
     {
+        $id = ContainerId::fromString('CSQU3054383');
         $port = new Port('Westhaven');
 
-        $container = new Container($port);
+        $container = new Container($id, $port);
 
-        $this->assertInstanceOf(Port::class, $container->port());
+        $this->assertInstanceOf(Container::class, $container);
+
+        $this->assertSame($id, $container->id());
         $this->assertSame($port, $container->port());
     }
 }
