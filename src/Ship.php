@@ -8,15 +8,12 @@ class Ship
 {
     private $name;
     private $capacity;
-    private $position;
-    private $targetPorts;
+    private $atPort = true;
 
-    public function __construct(Name $name, Capacity $capacity, Port $position, array $targetPorts)
+    public function __construct(Name $name, Capacity $capacity)
     {
         $this->name = $name;
         $this->capacity = $capacity;
-        $this->position = $position;
-        $this->targetPorts = $targetPorts;
     }
 
     public function name(): Name
@@ -29,16 +26,8 @@ class Ship
         return $this->capacity;
     }
 
-    public function position(): Port
+    public function atPort(): bool
     {
-        return $this->position;
-    }
-
-    /**
-     * @return Port[]
-     */
-    public function targetPorts(): array
-    {
-        return $this->targetPorts;
+        return $this->atPort;
     }
 }

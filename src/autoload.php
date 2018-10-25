@@ -12,11 +12,15 @@ spl_autoload_register(
                 'example\\container' => '/Container.php',
                 'example\\containerid' => '/ContainerId.php',
                 'example\\exception' => '/exceptions/Exception.php',
+                'example\\fleet' => '/Fleet.php',
+                'example\\fleetexception' => '/exceptions/FleetException.php',
                 'example\\invalidcontaineridexception' => '/exceptions/InvalidContainerIdException.php',
                 'example\\invalidnameexception' => '/exceptions/InvalidNameException.php',
                 'example\\name' => '/Name.php',
                 'example\\port' => '/Port.php',
-                'example\\ship' => '/Ship.php'
+                'example\\positiontype' => '/Position.php',
+                'example\\ship' => '/Ship.php',
+                'example\\shippingcompany' => '/ShippingCompany.php'
             );
         }
         $cn = strtolower($class);
