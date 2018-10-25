@@ -10,14 +10,17 @@ class ShipTest extends TestCase
     {
         $name = new Name('Berta');
         $capacity = new Capacity(100);
+        $port = new Port(new Name('Hawaii'));
 
         $ship = new Ship(
             $name,
-            $capacity
+            $capacity,
+            $port
         );
 
         $this->assertInstanceOf(Ship::class, $ship);
         $this->assertSame($name, $ship->name());
         $this->assertSame($capacity, $ship->capacity());
+        $this->assertSame($port, $ship->position());
     }
 }

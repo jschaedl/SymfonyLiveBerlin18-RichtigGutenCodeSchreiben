@@ -12,7 +12,8 @@ class ShippingCompanyTest extends TestCase
         $fleet = new Fleet(
             new Ship(
                 new Name('Berta'),
-                new Capacity(100)
+                new Capacity(100),
+                new Port(new Name('Hongkong'))
             )
         );
 
@@ -22,5 +23,31 @@ class ShippingCompanyTest extends TestCase
 
         $this->assertSame($name, $shippingCompany->name());
         $this->assertSame($fleet, $shippingCompany->fleet());
+    }
+    
+    public function test_can_find_available_ship_for_route()
+    {
+        $aPort = new Port(new Name('Hongkong'));
+        $anotherPort = new Port(new Name('Hawaii'));
+
+        $ship = new Ship(
+            new Name('Berta'),
+            new Capacity(10),
+            $aPort
+        );
+
+        $shippingCompany = new ShippingCompany(
+            new Name('Berta'),
+            new Fleet($ship)
+        );
+
+        $route = new Route([
+            $aPort,
+            $anotherPort
+        ]);
+
+        $availableShip = $shippingCompany->findAvailableShip($route);
+
+        $this->assertSame($ship, $availableShip);
     }
 }

@@ -7,9 +7,8 @@ namespace example;
 /**
  * @author Jan Schädlich <jan.schaedlich@sensiolabs.de>
  */
-class PositionType extends \SplEnum
+interface Position
 {
-    const SEA = 1;
-    const PORT = 2;
+
 }
 

@@ -7,17 +7,7 @@
 
 namespace example;
 
-final class Port implements Position
+final class Sea implements Position
 {
-    private $name;
 
-    public function __construct(Name $name)
-    {
-        $this->name = $name;
-    }
-
-    public function name(): Name
-    {
-        return $this->name;
-    }
 }

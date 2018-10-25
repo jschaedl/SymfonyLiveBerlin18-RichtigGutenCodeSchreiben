@@ -8,12 +8,13 @@ class Ship
 {
     private $name;
     private $capacity;
-    private $atPort = true;
+    private $position;
 
-    public function __construct(Name $name, Capacity $capacity)
+    public function __construct(Name $name, Capacity $capacity, Position $position)
     {
         $this->name = $name;
         $this->capacity = $capacity;
+        $this->position = $position;
     }
 
     public function name(): Name
@@ -26,8 +27,18 @@ class Ship
         return $this->capacity;
     }
 
-    public function atPort(): bool
+    public function isAtPort(): bool
     {
-        return $this->atPort;
+        return $this->position instanceof Port;
+    }
+
+    public function isOnSea(): bool
+    {
+        return $this->position instanceof Sea;
+    }
+
+    public function position(): Position
+    {
+        return $this->position;
     }
 }

@@ -19,7 +19,7 @@ final class ContainerTest extends TestCase
     public function test_can_be_constructed(): void
     {
         $id = ContainerId::fromString('CSQU3054383');
-        $port = new Port('Westhaven');
+        $port = new Port(new Name('Westhaven'));
         $container = new Container($id, $port);
 
         $this->assertInstanceOf(Container::class, $container);

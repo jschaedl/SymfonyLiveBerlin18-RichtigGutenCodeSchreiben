@@ -18,7 +18,10 @@ spl_autoload_register(
                 'example\\invalidnameexception' => '/exceptions/InvalidNameException.php',
                 'example\\name' => '/Name.php',
                 'example\\port' => '/Port.php',
-                'example\\positiontype' => '/Position.php',
+                'example\\position' => '/Position.php',
+                'example\\route' => '/Route.php',
+                'example\\routeexception' => '/exceptions/RouteException.php',
+                'example\\sea' => '/Sea.php',
                 'example\\ship' => '/Ship.php',
                 'example\\shippingcompany' => '/ShippingCompany.php'
             );

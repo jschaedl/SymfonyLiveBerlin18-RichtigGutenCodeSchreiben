@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace example;
 
-class Fleet
+class Fleet implements \IteratorAggregate
 {
     /**
      * @var Ship[]
@@ -20,8 +20,8 @@ class Fleet
         $this->ships = $ships;
     }
 
-    public function ships(): array
+    public function getIterator(): \Iterator
     {
-        return $this->ships;
+        return new \ArrayIterator($this->ships);
     }
 }

@@ -10,13 +10,14 @@ class FleetTest extends TestCase
     {
         $ship = new Ship(
             new Name('Berta'),
-            new Capacity(100)
+            new Capacity(100),
+            new Port(new Name('Hawaii'))
         );
 
         $fleet = new Fleet($ship);
 
         $this->assertInstanceOf(Fleet::class, $fleet);
-        $this->assertSame($ship, $fleet->ships()[0]);
+        $this->assertSame($ship, $fleet->getIterator()->current());
     }
 
     public function test_fleet_cannot_be_constructed_without_ships(): void

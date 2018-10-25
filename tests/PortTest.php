@@ -15,28 +15,9 @@ final class PortTest extends TestCase
 {
     public function test_can_be_constructed_with_a_valid_name(): void
     {
-        $name = 'Westhafen';
-
+        $name = new Name('Westhafen');
         $port = new Port($name);
 
-        $this->assertEquals($name, $port->name());
-    }
-
-    /**
-     * @dataProvider empty_name_provider
-     */
-    public function test_cannot_be_constructed_with_an_empty_name(string $name): void
-    {
-        $this->expectException(InvalidNameException::class);
-
-        new Port($name);
-    }
-
-    public function empty_name_provider(): array
-    {
-        return [
-            [''],
-            [' ']
-        ];
+        $this->assertSame($name, $port->name());
     }
 }
