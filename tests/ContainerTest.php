@@ -20,11 +20,9 @@ final class ContainerTest extends TestCase
     {
         $id = ContainerId::fromString('CSQU3054383');
         $port = new Port('Westhaven');
-
         $container = new Container($id, $port);
 
         $this->assertInstanceOf(Container::class, $container);
-
         $this->assertSame($id, $container->id());
         $this->assertSame($port, $container->port());
     }
