@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class PortTest extends TestCase
 {
-    public function test_has_a_name(): void
+    public function test_can_be_constructed_with_a_valid_name(): void
     {
         $name = 'Westhafen';
 
@@ -25,7 +25,7 @@ final class PortTest extends TestCase
     /**
      * @dataProvider empty_name_provider
      */
-    public function test_name_cannot_be_empty(string $name): void
+    public function test_cannot_be_constructed_with_an_empty_name(string $name): void
     {
         $this->expectException(InvalidNameException::class);
 
