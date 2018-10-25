@@ -1,6 +1,7 @@
-* Ein Hafen hat einen Namen, der nicht leer ist
-* Ein Container hat eine Identifikationsnummer nach ISO 6346
-* Ein Container hat einen Zielhafen
+# Requirements
+
+## Todo
+
 * Ein Schiff hat einen Namen, der nicht leer ist
 * Ein Schiff hat eine Kapazität für Container, die nicht negativ ist
 * Ein Schiff hat eine aktuelle Position
@@ -13,3 +14,9 @@
 * Ein Container kann in der Logistiksoftware angemeldet werden
 * Die Logistiksoftware kann einen Container einem Schiff zuweisen
 * Ein Container kann einem Schiff nur dann zugewiesen werden, wenn auf dem Schiff Platz für den Container ist
+
+## Done
+
+* Ein Hafen hat einen Namen, der nicht leer ist
+* Ein Container hat eine Identifikationsnummer nach ISO 6346
+* Ein Container hat einen Zielhafen (immer?)
