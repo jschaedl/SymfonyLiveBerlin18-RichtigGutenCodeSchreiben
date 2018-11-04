@@ -13,11 +13,14 @@
 ## Done
 
 * Ein Hafen hat einen Namen, der nicht leer ist
+
 * Ein Container hat eine Identifikationsnummer nach ISO 6346
 * Ein Container hat einen Zielhafen (immer?)
+
 * Ein Schiff hat einen Namen, der nicht leer ist
 * Ein Schiff hat eine Kapazität für Container, die nicht negativ ist
 * Ein Schiff hat eine aktuelle Position
 * Ein Schiff hat mindestens einen Zielhafen
+
 * Eine Reederei hat einen Namen, der nicht leer ist
 * Eine Reederei verfügt über mindestens ein Schiff

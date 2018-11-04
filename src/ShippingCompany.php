@@ -37,5 +37,7 @@ class ShippingCompany
                 return $ship;
             }
         }
+
+        //...
     }
 }

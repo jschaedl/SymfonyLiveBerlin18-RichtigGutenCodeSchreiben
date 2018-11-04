@@ -11,7 +11,7 @@ class Capacity
 
     public function __construct(int $capacity)
     {
-        if ($capacity < 1) {
+        if ($capacity < 0) {
             throw new CapacityLessThenZeroException();
         }
 
